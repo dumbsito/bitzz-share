@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+<app-dash></app-dash>
+<div class="home">
+  
+<div class="profile d-flex">
+    <img [src]="datos.avatar_url" alt="">
+    <div class="info">
+        <h1>{{datos.name}}</h1>
+        <h3>@ {{datos.login}}</h3>
+        <div class="d-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width="0" class="inline text-xl" viewBox="0 0 24 24">
+                <path fill="none" stroke="none" d="M0 0h24v24H0z"/>
+                <path stroke="none" d="M12 2C8.13 2 5 5.13 5 9c0 1.74.5 3.37 1.41 4.84.95 1.54 2.2 2.86 3.16 4.4.47.75.81 1.45 1.17 2.26.26.55.47 1.5 1.26 1.5s1-.95 1.25-1.5c.37-.81.7-1.51 1.17-2.26.96-1.53 2.21-2.85 3.16-4.4C18.5 12.37 19 10.74 19 9c0-3.87-3.13-7-7-7zm0 9.75a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+              </svg>
+              
+            <p>{{datos.location}}</p></div>
+  
+        <div class="icons">
+          <a [href]="urlTwitter" ><i class="fa-brands fa-2x fa-twitter"></i></a> 
+          <a [href]="urlGithub"><i class="fa-brands fa-2x fa-github"></i></a>  
+        </div>
+    </div>
+</div>
+<div class="carditos">
+    <div class="cards">
+        <h4>Repos</h4>
+
+        <h1>{{datos.public_repos}}</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#2763EB" stroke="currentColor" stroke-width="0" class="inline text-lg" viewBox="0 0 18 16">
+            <path stroke="none" d="M3.5 2h-3c-.275 0-.5.225-.5.5v11c0 .275.225.5.5.5h3c.275 0 .5-.225.5-.5v-11c0-.275-.225-.5-.5-.5zM3 5H1V4h2v1zm5.5-3h-3c-.275 0-.5.225-.5.5v11c0 .275.225.5.5.5h3c.275 0 .5-.225.5-.5v-11c0-.275-.225-.5-.5-.5zM8 5H6V4h2v1z"/>
+            <path stroke="none" d="m11.954 2.773-2.679 1.35c-.246.124-.345.426-.222.671l4.5 8.93c.124.246.426.345.671.222l2.679-1.35c.246-.124.345-.426.222-.671l-4.5-8.93c-.124-.246-.426-.345-.671-.222z"/>
+            <path stroke="none" d="M14.5 13.5c0 .276-.224.5-.5.5s-.5-.224-.5-.5.224-.5.5-.5.5.224.5.5z"/>
+          </svg>
+    </div>
+
+    <div class="cards">
+        <h4>Followers</h4>
+
+        <h1>{{datos.followers}}</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#2763EB" stroke="currentColor" stroke-width="0" class="inline text-lg" viewBox="0 0 16 16">
+            <path stroke="none" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+          </svg>
+          
+
+    </div>
+    <div class="cards">
+            <h4>Following</h4>
+    
+            <h1>{{datos.following}}</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#2763EB" stroke="currentColor" stroke-width="0" class="inline text-lg" viewBox="0 0 16 16">
+                <path stroke="none" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+              </svg>
+        
+    </div>
+    <div class="cards">
+                <h4>Starred</h4>
+        
+                <h1></h1>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#2763EB" stroke="currentColor" stroke-width="0" class="inline text-xl" viewBox="0 0 1024 1024">
+                    <path stroke="none" d="m908.1 353.1-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3zM664.8 561.6l36.1 210.3L512 672.7 323.1 772l36.1-210.3-152.8-149L417.6 382 512 190.7 606.4 382l211.2 30.7-152.8 148.9z"/>
+                  </svg>
+                  
+    </div>   
+    <div class="cards">
+             <h4>Orgs</h4>
+            
+           <h1>23</h1>
+           <svg xmlns="http://www.w3.org/2000/svg" fill="#2763EB" stroke="currentColor" stroke-width="0" class="text-4xl text-blue-600" viewBox="0 0 24 24">
+            <g stroke="none">
+              <path fill="none" d="M0 0h24v24H0z"/>
+              <path d="M3 19V5.7a1 1 0 0 1 .658-.94l9.671-3.516a.5.5 0 0 1 .671.47v4.953l6.316 2.105a1 1 0 0 1 .684.949V19h2v2H1v-2h2zm2 0h7V3.855L5 6.401V19zm14 0v-8.558l-5-1.667V19h5z"/>
+            </g>
+          </svg>    
+    </div>     
+</div>
+
+<div class="grid">
+<ul>
+    <li>Jan</li>
+    <li>Feb</li>
+    <li>Mar</li>
+    <li>Apr</li>
+    <li>May</li>
+    <li>Jun</li>
+    <li>Jul</li>
+    <li>Aug</li>
+    <li>Sep</li>
+    <li>Oct</li>
+    <li>Nov</li>
+    <li>Dec</li>
+</ul>
+<article class="grilla" id="grilla">
+
+  <div class="square" *ngFor="let _ of [].constructor(369)">
+
+  </div>
+
+ 
+</article>
+<footer>
+  <h4>19 contributions in 2023</h4>
+  <h5>Less More</h5>
+</footer>
+</div>
+
+</div>
+
+
+
+
+

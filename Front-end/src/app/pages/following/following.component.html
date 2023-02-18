@@ -1,0 +1,21 @@
+
+<app-navbar></app-navbar>
+<app-dash></app-dash>
+<div class="following">
+
+    <div class="cardcontainer ">
+    <div class="cards d-flex " *ngFor="let item of datos">
+ <img [src]="item.avatar_url">
+ <div class="info">
+    <h2>{{item.name}}</h2>
+    <p>@{{item.login}}</p>
+  <a [href]="item.html_url">  <i class="fa-brands fa-2x  fa-github"></i></a>
+ </div>
+        </div>
+        </div>
+
+    <div>
+        paginacion
+    </div>
+    
+</div>
